@@ -1,13 +1,13 @@
 // Code your solution here
 
-function findMatching(dirvers, name){
-  return dirvers.filter(element => element.toLowerCase() === name.toLowerCase())
+function findMatching(dirvers, string){
+  return dirvers.filter(dirver => dirver.toUpperCase() === string.toUpperCase())
 }
 
-function fuzzyMatch(dirvers, letter){
-  return dirvers.filter(element => element.toLowerCase()[0] === letter.toLowerCase()[0])
+function fuzzyMatch(dirvers, string){
+  return dirvers.filter(dirver => dirver.toLowerCase().indexOf(string.toLowerCase()) === 0)
 }
 
 function matchName(dirvers, findName){
-  return dirvers.filter(element => element.name === findName)
+  return dirvers.filter(dirver => dirver.name === findName)
 }
